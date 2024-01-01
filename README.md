@@ -34,18 +34,6 @@ sudo apt-get install libasound2-dev
 
 > HomeBrew で sdcc をインストールすると対応していないバージョン（4.1.0以外）がインストールされる可能性があるため、上記リンクからダウンロードしたものを使用してください。（ただし、未署名バイナリなので Finder で control ボタンを押しながら開き1ファイルづつ実行の許可をする必要があり面倒くさいので頑張ってください）
 
-## 解説
-
-- [vgszero](https://github.com/suzukiplan/vgszero) をサブモジュールとして追加
-  - `git submodule add https://github.com/suzukiplan/vgszero`
-- [./Makefile](./Makefile) でサブモジュールの初期化、ツールチェインのビルド、[./src](./src/)のビルドを実行
-- [./src](./src/) ディレクトリ以下がプロジェクトのモジュール
-  - [./src/Makefile](./src/Makefile) ... メイクファイル
-  - [./src/program.c](./src/program.c) ... プログラム
-  - [./src/song1.mml](./src/song1.mml) ... MML (BGM ソース)
-  - [./src/se1.wav](./src/se1.wav) ... 効果音1
-  - [./src/se2.wav](./src/se2.wav) ... 効果音2
-
 ## 使い方
 
 ### 1. セットアップ
