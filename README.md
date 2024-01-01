@@ -24,11 +24,15 @@ sudo apt-get install libasound2-dev
 
 [SDCC 4.1.0](https://sourceforge.net/projects/sdcc/files/sdcc-linux-amd64/4.1.0/) をインストールしてパスを切る。
 
+> apt や apt-get で sdcc をインストールすると対応していないバージョン（4.1.0以外）がインストールされる可能性があるため、上記リンクからダウンロードしたものを使用してください。
+
 ### macOS
 
 - XCODE
 - `brew install sdl2`
 - [SDCC 4.1.0](https://sourceforge.net/projects/sdcc/files/sdcc-macos-amd64/4.1.0/)をインストールしてパスを切る
+
+> HomeBrew で sdcc をインストールすると対応していないバージョン（4.1.0以外）がインストールされる可能性があるため、上記リンクからダウンロードしたものを使用してください。（ただし、未署名バイナリなので Finder で control ボタンを押しながら開き1ファイルづつ実行の許可をする必要があり面倒くさいので頑張ってください）
 
 ## 解説
 
