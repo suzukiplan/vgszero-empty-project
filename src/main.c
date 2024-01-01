@@ -1,5 +1,7 @@
-#include "../vgszero/lib/sdcc/vgs0lib.h"
-#include "palette.h"
+/**
+ * メインコード
+ */
+#include "header.h"
 
 void main(void)
 {
