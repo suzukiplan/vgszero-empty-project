@@ -2,13 +2,11 @@
 
 VGS-Zero のゲームを開発するための初期プロジェクトです。
 
+## 対応機種
+
+VGS-Zero のゲーム開発は Linux (推奨) または macOS に対応しています。
+
 ## 前準備
-
-### macOS
-
-- XCODE
-- `brew install sdl2`
-- [SDCC 4.1.0](https://sourceforge.net/projects/sdcc/files/sdcc-macos-amd64/4.1.0/)をインストールしてパスを切る
 
 ### Linux
 
@@ -25,6 +23,12 @@ sudo apt-get install libasound2-dev
 ```
 
 [SDCC 4.1.0](https://sourceforge.net/projects/sdcc/files/sdcc-linux-amd64/4.1.0/) をインストールしてパスを切る。
+
+### macOS
+
+- XCODE
+- `brew install sdl2`
+- [SDCC 4.1.0](https://sourceforge.net/projects/sdcc/files/sdcc-macos-amd64/4.1.0/)をインストールしてパスを切る
 
 ## 解説
 
