@@ -72,6 +72,9 @@ git commit -m "initial commit"
 make
 ```
 
+- make が完了すると SDL2 版 VGS-Zero がビルドされた game.pkg を起動します
+- 初回 make には少し時間が掛かりますが 2 回目以降は高速になります
+
 ### 2. [./src/Makefile](./src/Makefile) の編集方法
 
 以下の 4 行を編集してください
