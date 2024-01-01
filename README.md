@@ -40,12 +40,34 @@ sudo apt-get install libasound2-dev
 
 ## 使い方
 
-- 本リポジトリを fork
-- プロジェクト設定を private に変更（optional）
-- [./src/Makefile](./src/Makefile) を適宜編集
-- [./src/program.c](./src/program.c) にゲームのプログラムを記述
+### 1. セットアップ
 
-## [./src/Makefile](./src/Makefile) の編集
+```bash
+# 本リポジトリを mygame として取得
+git clone https://github.com/suzukiplan/vgszero-empty-project mygame
+
+# ディレクトリ移動
+cd mygame
+
+# .git を削除
+rm -rf .git
+
+# ./src/Makefile を編集して PROJECT を自分のプロジェクト名に変更するなど
+vi ./src/Makefile
+
+# README.md をクリア
+echo "# mygame" >README.md
+
+# .git を初期化
+git init
+git add -A
+git commit -m "initial commit"
+
+# ビルド
+make
+```
+
+### 2. [./src/Makefile](./src/Makefile) の編集方法
 
 以下の 4 行を編集してください
 
@@ -61,3 +83,7 @@ BGM_FILES = song1.bgm
 - `WAV_FILES` ... 効果音データ（.wav）ファイルを記述（複数可）
 - `BGM_FILES` ... BGMデータ（.mml からコンパイルされる .bgm）ファイルを記述（複数可）
 
+### 3. プログラムの記述
+
+- [./src/program.c](./src/program.c) にゲームのメインコードを記述してください
+- 初期状態は Hello, World! (BGM & SE 付き) です
