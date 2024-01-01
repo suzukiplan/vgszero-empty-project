@@ -48,6 +48,10 @@ cd mygame
 # .git を削除
 rm -rf .git
 
+# submodule を一旦削除
+rm .gitmodules
+rm -rf vgszero
+
 # ./src/Makefile を編集して PROJECT を自分のプロジェクト名に変更するなど
 vi ./src/Makefile
 
@@ -56,6 +60,11 @@ echo "# mygame" >README.md
 
 # .git を初期化
 git init
+
+# サブモジュールを追加
+git submodule add https://github.com/suzukiplan/vgszero
+
+# commit
 git add -A
 git commit -m "initial commit"
 
