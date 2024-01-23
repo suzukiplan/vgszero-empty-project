@@ -14,4 +14,7 @@ game.pkg
 bgm.dat
 se.dat
 palette.h
-
+screen.bmp
+ram.bin
+vram.bin
+save.dat
