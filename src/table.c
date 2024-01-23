@@ -2,7 +2,6 @@
  * テーブル定義
  */
 #include "../vgszero/lib/sdcc/vgs0lib.h"
-#include "palette.h"
 
 // 乱数テーブル
 const uint8_t random[256] = {

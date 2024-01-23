@@ -5,8 +5,9 @@
 
 void main(void)
 {
-    // パレットを初期化
-    init_palette();
+    // Bank 5 (palette.bin) を用いてパレットを初期化
+    vgs0_dma(5);
+    vgs0_memcpy((uint16_t)VGS0_ADDR_PALETTE, (uint16_t)VGS0_ADDR_CHARACTER, 512);
 
     // Bank 4 を Character Pattern Table ($A000) に転送 (DMA)
     vgs0_dma(4);

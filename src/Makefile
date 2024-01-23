@@ -51,8 +51,8 @@ clean:
 game.pkg: ${PROJECT}.rom bgm.dat se.dat
 	${MAKEPKG} -o game.pkg -r ${PROJECT}.rom -b bgm.dat -s se.dat
 
-${PROJECT}.rom: ${CHR_FILES} program.bin
-	${MAKEROM} ${PROJECT}.rom program.bin ${CHR_FILES}
+${PROJECT}.rom: program.bin ${CHR_FILES} palette.bin
+	${MAKEROM} ${PROJECT}.rom program.bin ${CHR_FILES} palette.bin
 
 program.bin: ${SRC_FILES} ${VGSHOME}/lib/sdcc/vgs0.lib ${VGSHOME}/lib/sdcc/vgs0lib.h
 	${LINK}
@@ -63,6 +63,9 @@ se.dat: ${WAV_FILES}
 
 bgm.dat: ${BGM_FILES}
 	${MAKEBGM} $@ ${BGM_FILES}
+
+palette.bin: image1.bmp
+		${BMP2CHR} $< image1.chr palette.bin
 
 .SUFFIXES: .rel .src
 
@@ -77,7 +80,7 @@ bgm.dat: ${BGM_FILES}
 .SUFFIXES: .chr .bmp
 
 %.chr: %.bmp
-	${BMP2CHR} $< $@ palette.h
+	${BMP2CHR} $< $@
 
 .SUFFIXES: .bgm .mml
 
